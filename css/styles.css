@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(-45deg, #de72bc, #725dc5);
+}
+
+.container {
+}
+.container > .upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.219);
+  padding: 10px 20px;
+}
+.board-name {
+  font-size: 19px;
+  font-weight: bold;
+}
+.user {
+  font-size: 30px;
+}
+
+.main {
+}
+
+.main .lists {
+  display: flex;
+}
+
+.lists .list {
+  background-color: attr(data-color type(<color>));
+  margin: 10px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.list  div, .list i , .list div:not(:last-of-type){
+    color: #803FA5;
+    padding: 2px;
+    border-radius: 6px;
+    
+    transition: 0.1s;
+}
+
+.list .upper {
+    display: flex;
+    gap: 10px;
+}
+.list .upper .list-title{
+    
+    color: #48245D;
+    margin-right: 20px;
+    font-weight: 600;
+}
+
+.list .lower {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    padding: 7px 7px 7px 40px !important;
+    transition: 0.1s;
+    position: relative;
+}
+.list .lower::before {
+    content: "\2b";
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.list .collapse:hover , .list .lower:hover {
+    background-color: rgba(0, 0, 0, 0.105);
+    cursor: pointer;
+     
+}
+.list .collapse:hover i , .list .lower:hover {
+     color: #48245D;
+}
+
+.list .cards {
+    display: none;
+}
+

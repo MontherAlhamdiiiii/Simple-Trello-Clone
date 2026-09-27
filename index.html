@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trello Clone</title>
+    <!-- Normalize link -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fontawesome link -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper">
+        <div class="board-name">My Trello Board</div>
+        <div class="user">
+          <i class="fa-solid fa-circle-user"></i>
+        </div>
+      </div>
+      <div class="main">
+        <div class="lists">
+          <div class="list" data-color="#EED7FC" >
+            <div class="upper">
+              <div class="list-title">Trello Starter Guide</div>
+              <div class="counter">0</div>
+              <div class="collapse">
+                <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+              </div>
+            </div>
+            <div class="lower">
+                <!-- Plus With pseudo elements -->
+                Add Card
+            </div>
+            <div class="cards">
+              <div class="card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
