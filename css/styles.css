@@ -49,55 +49,107 @@ body {
   margin: 10px;
   padding: 10px;
   border-radius: 7px;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-.list  div, .list i , .list div:not(:last-of-type){
-    color: #803FA5;
-    padding: 2px;
-    border-radius: 6px;
-    
-    transition: 0.1s;
+.list div,
+.list i,
+.list div:not(:last-of-type) {
+  color: #803fa5;
+  padding: 2px 0px;
+  border-radius: 6px;
+
+  transition: 0.1s;
 }
 
 .list .upper {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
-.list .upper .list-title{
-    
-    color: #48245D;
-    margin-right: 20px;
-    font-weight: 600;
+.list .upper .list-title {
+  color: #48245d;
+  margin-right: 20px;
+  font-weight: 600;
 }
-
 .list .lower {
-    display: flex;
-    align-items: center;
-    margin-top: 2px;
-    padding: 7px 7px 7px 40px !important;
-    transition: 0.1s;
-    position: relative;
-}
-.list .lower::before {
-    content: "\2b";
-    position: absolute;
-    top: 50%;
-    left: 7px;
-    transform: translateY(-50%);
-    padding: 5px;
-    font-size: 20px;
+
 }
 
-.list .collapse:hover , .list .lower:hover {
-    background-color: rgba(0, 0, 0, 0.105);
-    cursor: pointer;
-     
+.list .add-card {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+  padding: 7px 7px 7px 40px !important;
+  transition: 0.1s;
+  position: relative;
 }
-.list .collapse:hover i , .list .lower:hover {
-     color: #48245D;
+.list .add-card::before {
+  content: "\2b";
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  padding: 5px;
+  font-size: 20px;
+}
+
+.list .collapse:hover,
+.list .add-card:hover,
+.list .input .input-btns i:hover {
+  background-color: rgba(0, 0, 0, 0.105);
+  cursor: pointer;
+}
+.list .collapse:hover i,
+.list .add-card:hover {
+  color: #48245d;
 }
 
 .list .cards {
-    display: none;
+  display: none;
 }
 
+.list .input {
+    display: none;
+}
+.list .input input, .list .note{
+    width: 100%;
+    padding: 7px 7px 20px 7px;
+    border: none;
+    border-radius: 7px;
+    box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    outline: none;
+    caret-color: black;
+    color: black;
+}
+.list .note {
+    padding: 5px !important;
+    color: black !important;
+    background: white;
+    margin: 0px 0px 6px;
+}
+.list .input .input-btns{
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.list .input .input-btns button{
+     padding: 5px 14px;
+     background-color: #1868DB;
+     border: 1px solid #175CBE;
+     border-radius: 6px;
+     font-size: 12px;
+     font-weight: 500;
+}
+.list .input .input-btns i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #505258;
+    font-size: 12px;
+    padding: 5px 10px;
+}
