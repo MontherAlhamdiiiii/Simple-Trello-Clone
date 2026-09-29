@@ -45,6 +45,8 @@ body {
 }
 
 .lists .list {
+  height: fit-content;
+  flex-basis: 300px;
   background-color: attr(data-color type(<color>));
   margin: 10px;
   padding: 10px;
@@ -54,25 +56,70 @@ body {
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
+
+/* Coloring Inside */
 .list div,
 .list i,
 .list div:not(:last-of-type) {
   color: #803fa5;
-  padding: 2px 0px;
-  border-radius: 6px;
+}
 
-  transition: 0.1s;
+.list:nth-child(2) div,
+.list:nth-child(2) i,
+.list.list:nth-child(2) div:not(:last-of-type) {
+  color: #533F04;
+}
+
+.list:nth-child(3) div,
+.list:nth-child(3) i,
+.list.list:nth-child(3) div:not(:last-of-type) {
+  color: #164B35;
+}
+.list:nth-child(4) div,
+.list:nth-child(4) i,
+.list.list:nth-child(4) div:not(:last-of-type) {
+  color: #292A2E;
+}
+.lists {
 }
 
 .list .upper {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 .list .upper .list-title {
   color: #48245d;
-  margin-right: 20px;
   font-weight: 600;
 }
+.list .upper .list-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.list .upper .collapse {
+    padding: 4px;
+    border-radius: 7px;
+}
+.list .upper .counter {
+    padding: 4px;
+    position: relative;
+    cursor: default ;
+}
+.list .upper .counter:hover::before {
+   content: "Total  Card";
+   position: absolute;
+   bottom: calc(-100% - 5px);
+   left: 0px;
+   transform:  translateX(-50%);
+   background-color: black;
+   color: white;
+   width: 77px;
+   padding: 7px;
+   border-radius: 7px;
+}
+
 .list .lower {
 
 }
@@ -84,6 +131,7 @@ body {
   padding: 7px 7px 7px 40px !important;
   transition: 0.1s;
   position: relative;
+  border-radius: 7px;
 }
 .list .add-card::before {
   content: "\2b";
@@ -98,24 +146,26 @@ body {
 .list .collapse:hover,
 .list .add-card:hover,
 .list .input .input-btns i:hover {
-  background-color: rgba(0, 0, 0, 0.105);
+  background-color: rgba(37, 37, 37, 0.167);
   cursor: pointer;
 }
 .list .collapse:hover i,
 .list .add-card:hover {
-  color: #48245d;
 }
-
-.list .cards {
+/* Reset */
+.list .hide {
   display: none;
 }
-
-.list .input {
-    display: none;
+.list .display {
+    display: block;
 }
-.list .input input, .list .note{
+.margin-toggle {
+    margin: 0px !important;
+}
+
+.list .input input, .list .cards .card{
     width: 100%;
-    padding: 7px 7px 20px 7px;
+    padding: 7px 7px 50px 7px;
     border: none;
     border-radius: 7px;
     box-shadow:
@@ -125,8 +175,13 @@ body {
     caret-color: black;
     color: black;
 }
-.list .note {
-    padding: 5px !important;
+.list .input input:focus {
+    border: 2px solid #1868DB;
+}
+
+
+.list .cards .card {
+    padding: 13px !important;
     color: black !important;
     background: white;
     margin: 0px 0px 6px;
@@ -152,4 +207,5 @@ body {
     color: #505258;
     font-size: 12px;
     padding: 5px 10px;
+    border-radius: 7px;
 }
