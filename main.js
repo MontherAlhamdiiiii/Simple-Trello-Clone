@@ -1,4 +1,4 @@
-let lists = document.querySelectorAll(".lists .list:not(:last-child)");
+let lists = document.querySelectorAll(".lists .list");
 
 lists.forEach((list) => {
   let upper = list.querySelector(".upper");
@@ -108,6 +108,7 @@ lists.forEach((list) => {
       hideInput();
     }
   }
+  
 
   // toggle Rotate
   function toggleRotate() {
@@ -130,4 +131,4 @@ lists.forEach((list) => {
 });
 
 
-let addList = document.querySelector(".list:last-of-type");
+

@@ -42,6 +42,13 @@ body {
 
 .main .lists {
   display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+   
+.main .lists {
+  justify-content: center;
+}
 }
 
 .lists .list {
