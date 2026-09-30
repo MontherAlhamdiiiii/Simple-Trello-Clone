@@ -175,17 +175,105 @@ body {
     caret-color: black;
     color: black;
 }
+
+
+
 .list .input input:focus {
     border: 2px solid #1868DB;
 }
 
 
 .list .cards .card {
+    display: flex;
     padding: 13px !important;
-    color: black !important;
     background: white;
     margin: 0px 0px 6px;
+    position: relative;
 }
+
+.card {
+    position: relative;
+}
+
+.card .mark{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+
+}
+.card .mark i:first-of-type{
+    color: black;
+    opacity: 0;
+    transition: 0.2s;
+}
+.card:hover .mark i:first-of-type{ 
+    opacity: 1;
+}
+.card:hover .mark i:first-of-type{
+ 
+}
+.card .mark i:last-of-type{
+    color: #13724b;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+
+.card .text {
+    color: black !important;
+  transition: 0.5s;
+}
+.card:hover .text , .text-spacing{
+    padding-left: 25px;
+
+}
+.stay {
+    display: block !important;
+}
+.card:hover .mark i:first-of-type{
+    animation: changeColor 0.3s linear 0s forwards;
+}
+
+.card .delete {
+    color: #605e5e;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+/* Mark Start
+.card .mark i{
+    transition: all 2s;
+}
+
+.card .mark i{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card .mark i:first-of-type{
+    color: black;
+}
+.card .mark i:last-of-type{
+    color: #164B35;
+}
+.card .text {
+    color: black;   
+    transition: 0.5s;
+}
+.text-space {
+    padding-left: 10px;
+} */
+
+/* .card:hover .text {
+     padding-left: 25px;
+     
+} */
+/* mark End */
 .list .input .input-btns{
     margin-top: 6px;
     display: flex;
@@ -208,4 +296,27 @@ body {
     font-size: 12px;
     padding: 5px 10px;
     border-radius: 7px;
+}
+
+.add-list {
+  background-color: rgba(255, 255, 255, 0.281) !important;
+  cursor: pointer;
+}
+.add-list .text {
+  color: white !important;
+}
+.add-list .text::before {
+  content: '\2b';
+  margin-right: 10px;
+}
+/* animaiton */
+
+@keyframes changeColor {
+    0%{
+     color: rgba(0, 0, 0, 0);
+    }
+    100%{
+      color: black;
+    }
+    
 }
