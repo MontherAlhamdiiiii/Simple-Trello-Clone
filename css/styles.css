@@ -51,10 +51,22 @@ body {
 }
 }
 
+.lists .list:first-of-type {
+  background-color: #EED7FC;
+}
+.lists .list:nth-child(2){
+  background-color: #F5E989;
+}
+.lists .list:nth-child(3){
+  background-color: #BAF3DB;
+}
+.lists .list:nth-child(4){
+  background-color: #F1F2F4;
+}
+
 .lists .list {
   height: fit-content;
   flex-basis: 300px;
-  background-color: attr(data-color type(<color>));
   margin: 10px;
   padding: 10px;
   border-radius: 7px;
